@@ -4,8 +4,8 @@ go
 create table bronze.cust_info(
 	cst_id	int,
 	cst_key	nvarchar(15),
-	cst_firstname	nvarchar(15),
-	cst_lastname	nvarchar(15),
+	cst_firstname	nvarchar(25),
+	cst_lastname	nvarchar(25),
 	cst_marital_status	nvarchar(10),
 	cst_gndr	nvarchar(10),
 	cst_create_date date
