@@ -17,7 +17,7 @@ go
 create table bronze.prd_info(
 	
 prd_id	int,
-prd_key	 nvarchar(12),
+prd_key	 nvarchar(25),
 prd_nm    nvarchar(52),
 prd_cost	int,
 prd_line	nvarchar(12),
@@ -46,7 +46,7 @@ if OBJECT_ID('bronze.cust_az12','u') is not null
 drop table bronze.cust_az12
 go
 create table bronze.cust_az12(
-	CID	  nvarchar(12),
+	CID	  nvarchar(25),
 	BDATE	date,
 	GEN nvarchar(12)
 
@@ -57,7 +57,7 @@ drop table bronze.loc_a101
 go
 create table bronze.loc_a101(
 CID	nvarchar(20),
-CNTRY nvarchar(12)
+CNTRY nvarchar(30)
 )
 go
 
