@@ -9,7 +9,7 @@ create table SILVER.cust_info(
 	cst_marital_status	nvarchar(10),
 	cst_gndr	nvarchar(10),
 	cst_create_date date , 
-	DWH_Source nvarchar default 'crm',
+	DWH_Source nvarchar(10)default 'crm',
 	DWH_loaddate date default getdate()
 )
 go
@@ -26,7 +26,7 @@ prd_line	nvarchar(12),
 prd_start_dt	date,
 prd_end_dt date
  , 
-	DWH_Source nvarchar default 'crm',
+	DWH_Source nvarchar(10)default 'crm',
 	DWH_loaddate date default getdate()
 )
 go
@@ -44,7 +44,7 @@ sls_sales	int,
 sls_quantity int,
 sls_price int
  , 
-	DWH_Source nvarchar default 'crm',
+	DWH_Source nvarchar(10)default 'crm',
 	DWH_loaddate date default getdate()
 
 )
@@ -57,7 +57,7 @@ create table SILVER.cust_az12(
 	CID	  nvarchar(25),
 	BDATE	date,
 	GEN nvarchar(12) , 
-	DWH_Source nvarchar default 'erp',
+	DWH_Source nvarchar(10)default 'erp',
 	DWH_loaddate date default getdate()
 
 )
@@ -68,7 +68,7 @@ go
 create table SILVER.loc_a101(
 CID	nvarchar(20),
 CNTRY nvarchar(30), 
-	DWH_Source nvarchar default 'erp',
+	DWH_Source nvarchar(10)default 'erp',
 	DWH_loaddate date default getdate()
 )
 go
@@ -81,7 +81,7 @@ ID	nvarchar(20),
 CAT	nvarchar(20),
 SUBCAT	nvarchar(20),
 MAINTENANCE nvarchar(20), 
-	DWH_Source nvarchar default 'erp',
+	DWH_Source nvarchar(10)default 'erp',
 	DWH_loaddate date default getdate()
 
 )
