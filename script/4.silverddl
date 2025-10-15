@@ -1,0 +1,87 @@
+if OBJECT_ID('SILVER.cust_info','u') is not null
+drop table SILVER.cust_info
+go
+create table SILVER.cust_info(
+	cst_id	int,
+	cst_key	nvarchar(15),
+	cst_firstname	nvarchar(25),
+	cst_lastname	nvarchar(25),
+	cst_marital_status	nvarchar(10),
+	cst_gndr	nvarchar(10),
+	cst_create_date date , 
+	DWH_Source nvarchar default 'crm',
+	DWH_loaddate date default getdate()
+)
+go
+if OBJECT_ID('SILVER.prd_info','u') is not null
+drop table SILVER.prd_info
+go
+create table SILVER.prd_info(
+	
+prd_id	int,
+prd_key	 nvarchar(25),
+prd_nm    nvarchar(52),
+prd_cost	int,
+prd_line	nvarchar(12),
+prd_start_dt	date,
+prd_end_dt date
+ , 
+	DWH_Source nvarchar default 'crm',
+	DWH_loaddate date default getdate()
+)
+go
+if OBJECT_ID('SILVER.sales_details','u') is not null
+drop table SILVER.sales_details
+go
+create table SILVER.sales_details(
+sls_ord_num	 nvarchar(12),
+sls_prd_key	nvarchar(12),
+sls_cust_id	int,
+sls_order_dt int,
+sls_ship_dt	int,
+sls_due_dt	int,
+sls_sales	int,
+sls_quantity int,
+sls_price int
+ , 
+	DWH_Source nvarchar default 'crm',
+	DWH_loaddate date default getdate()
+
+)
+go
+
+if OBJECT_ID('SILVER.cust_az12','u') is not null
+drop table SILVER.cust_az12
+go
+create table SILVER.cust_az12(
+	CID	  nvarchar(25),
+	BDATE	date,
+	GEN nvarchar(12) , 
+	DWH_Source nvarchar default 'erp',
+	DWH_loaddate date default getdate()
+
+)
+go
+if OBJECT_ID('SILVER.loc_a101','u') is not null
+drop table SILVER.loc_a101
+go
+create table SILVER.loc_a101(
+CID	nvarchar(20),
+CNTRY nvarchar(30), 
+	DWH_Source nvarchar default 'erp',
+	DWH_loaddate date default getdate()
+)
+go
+
+if OBJECT_ID('SILVER.px_cat_g1v2','u') is not null
+drop table SILVER.px_cat_g1v2
+go
+create table SILVER.px_cat_g1v2(
+ID	nvarchar(20),
+CAT	nvarchar(20),
+SUBCAT	nvarchar(20),
+MAINTENANCE nvarchar(20), 
+	DWH_Source nvarchar default 'erp',
+	DWH_loaddate date default getdate()
+
+)
